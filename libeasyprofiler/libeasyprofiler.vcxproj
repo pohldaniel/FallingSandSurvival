@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="block_descriptor.h" />
+    <ClInclude Include="chunk_allocator.h" />
+    <ClInclude Include="current_thread.h" />
+    <ClInclude Include="current_time.h" />
+    <ClInclude Include="event_trace_status.h" />
+    <ClInclude Include="include\easy\arbitrary_value.h" />
+    <ClInclude Include="include\easy\details\arbitrary_value_aux.h" />
+    <ClInclude Include="include\easy\details\arbitrary_value_public_types.h" />
+    <ClInclude Include="include\easy\details\easy_compiler_support.h" />
+    <ClInclude Include="include\easy\details\profiler_aux.h" />
+    <ClInclude Include="include\easy\details\profiler_colors.h" />
+    <ClInclude Include="include\easy\details\profiler_in_use.h" />
+    <ClInclude Include="include\easy\details\profiler_public_types.h" />
+    <ClInclude Include="include\easy\easy_net.h" />
+    <ClInclude Include="include\easy\easy_protocol.h" />
+    <ClInclude Include="include\easy\easy_socket.h" />
+    <ClInclude Include="include\easy\profiler.h" />
+    <ClInclude Include="include\easy\reader.h" />
+    <ClInclude Include="include\easy\serialized_block.h" />
+    <ClInclude Include="include\easy\utility.h" />
+    <ClInclude Include="include\easy\writer.h" />
+    <ClInclude Include="nonscoped_block.h" />
+    <ClInclude Include="profile_manager.h" />
+    <ClInclude Include="spin_lock.h" />
+    <ClInclude Include="stack_buffer.h" />
+    <ClInclude Include="thread_storage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base_block_descriptor.cpp" />
+    <ClCompile Include="block.cpp" />
+    <ClCompile Include="block_descriptor.cpp" />
+    <ClCompile Include="easy_socket.cpp" />
+    <ClCompile Include="event_trace_win.cpp" />
+    <ClCompile Include="nonscoped_block.cpp" />
+    <ClCompile Include="profiler.cpp" />
+    <ClCompile Include="profile_manager.cpp" />
+    <ClCompile Include="reader.cpp" />
+    <ClCompile Include="serialized_block.cpp" />
+    <ClCompile Include="thread_storage.cpp" />
+    <ClCompile Include="writer.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{719E04AA-426A-49A9-9990-5103A5775D0A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libeasyprofiler</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\lib\x64\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\lib\x86\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\libd\x86\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\libd\x64\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;EASY_CHRONO_STEADY_CLOCK=0;EASY_CHRONO_HIGHRES_CLOCK=0;EASY_OPTION_START_LISTEN_ON_STARTUP=0;EASY_OPTION_MEASURE_STORAGE_EXPAND=0;EASY_OPTION_STORAGE_EXPAND_BLOCKS_ON=0;EASY_OPTION_TRUNCATE_LONG_RUNTIME_NAMES=0;EASY_OPTION_CHECK_MAX_VALUE_DATA_SIZE=0;EASY_OPTION_IMPLICIT_THREAD_REGISTRATION=1;EASY_OPTION_EVENT_TRACING_ENABLED=1;EASY_OPTION_LOW_PRIORITY_EVENT_TRACING=1;EASY_OPTION_LOG_ENABLED=0;EASY_OPTION_PRETTY_PRINT_FUNCTIONS=0;EASY_OPTION_BUILTIN_COLORS=1;_BUILD_PROFILER=1;EASY_PROFILER_STATIC=1;EASY_PROFILER_VERSION_MAJOR=2;EASY_PROFILER_VERSION_MINOR=1;EASY_PROFILER_VERSION_PATCH=0;EASY_DEFAULT_PORT=28077;BUILD_WITH_EASY_PROFILER=1;_WIN32_WINNT=0x0600;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>EASY_OPTION_MEASURE_STORAGE_EXPAND=0;EASY_OPTION_STORAGE_EXPAND_BLOCKS_ON=0;EASY_OPTION_TRUNCATE_LONG_RUNTIME_NAMES=0;EASY_OPTION_CHECK_MAX_VALUE_DATA_SIZE=0;EASY_OPTION_IMPLICIT_THREAD_REGISTRATION=1;EASY_OPTION_EVENT_TRACING_ENABLED=1;EASY_OPTION_LOW_PRIORITY_EVENT_TRACING=1;EASY_OPTION_LOG_ENABLED=0;EASY_OPTION_PRETTY_PRINT_FUNCTIONS=0;EASY_OPTION_BUILTIN_COLORS=1;EASY_PROFILER_STATIC=1;EASY_PROFILER_VERSION_MAJOR=2;EASY_PROFILER_VERSION_MINOR=1;EASY_PROFILER_VERSION_PATCH=0;EASY_DEFAULT_PORT=28077;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;EASY_CHRONO_STEADY_CLOCK=0;EASY_CHRONO_HIGHRES_CLOCK=0;EASY_OPTION_START_LISTEN_ON_STARTUP=0;EASY_OPTION_MEASURE_STORAGE_EXPAND=0;EASY_OPTION_STORAGE_EXPAND_BLOCKS_ON=0;EASY_OPTION_TRUNCATE_LONG_RUNTIME_NAMES=0;EASY_OPTION_CHECK_MAX_VALUE_DATA_SIZE=0;EASY_OPTION_IMPLICIT_THREAD_REGISTRATION=1;EASY_OPTION_EVENT_TRACING_ENABLED=1;EASY_OPTION_LOW_PRIORITY_EVENT_TRACING=1;EASY_OPTION_LOG_ENABLED=0;EASY_OPTION_PRETTY_PRINT_FUNCTIONS=0;EASY_OPTION_BUILTIN_COLORS=1;_BUILD_PROFILER=1;EASY_PROFILER_STATIC=1;EASY_PROFILER_VERSION_MAJOR=2;EASY_PROFILER_VERSION_MINOR=1;EASY_PROFILER_VERSION_PATCH=0;EASY_DEFAULT_PORT=28077;BUILD_WITH_EASY_PROFILER=1;_WIN32_WINNT=0x0600;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>EASY_OPTION_MEASURE_STORAGE_EXPAND=0;EASY_OPTION_STORAGE_EXPAND_BLOCKS_ON=0;EASY_OPTION_TRUNCATE_LONG_RUNTIME_NAMES=0;EASY_OPTION_CHECK_MAX_VALUE_DATA_SIZE=0;EASY_OPTION_IMPLICIT_THREAD_REGISTRATION=1;EASY_OPTION_EVENT_TRACING_ENABLED=1;EASY_OPTION_LOW_PRIORITY_EVENT_TRACING=1;EASY_OPTION_LOG_ENABLED=0;EASY_OPTION_PRETTY_PRINT_FUNCTIONS=0;EASY_OPTION_BUILTIN_COLORS=1;EASY_PROFILER_STATIC=1;EASY_PROFILER_VERSION_MAJOR=2;EASY_PROFILER_VERSION_MINOR=1;EASY_PROFILER_VERSION_PATCH=0;EASY_DEFAULT_PORT=28077;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;EASY_CHRONO_STEADY_CLOCK=0;EASY_CHRONO_HIGHRES_CLOCK=0;EASY_OPTION_START_LISTEN_ON_STARTUP=0;EASY_OPTION_MEASURE_STORAGE_EXPAND=0;EASY_OPTION_STORAGE_EXPAND_BLOCKS_ON=0;EASY_OPTION_TRUNCATE_LONG_RUNTIME_NAMES=0;EASY_OPTION_CHECK_MAX_VALUE_DATA_SIZE=0;EASY_OPTION_IMPLICIT_THREAD_REGISTRATION=1;EASY_OPTION_EVENT_TRACING_ENABLED=1;EASY_OPTION_LOW_PRIORITY_EVENT_TRACING=1;EASY_OPTION_LOG_ENABLED=0;EASY_OPTION_PRETTY_PRINT_FUNCTIONS=0;EASY_OPTION_BUILTIN_COLORS=1;_BUILD_PROFILER=1;EASY_PROFILER_STATIC=1;EASY_PROFILER_VERSION_MAJOR=2;EASY_PROFILER_VERSION_MINOR=1;EASY_PROFILER_VERSION_PATCH=0;EASY_DEFAULT_PORT=28077;BUILD_WITH_EASY_PROFILER=1;_WIN32_WINNT=0x0600;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>EASY_CHRONO_STEADY_CLOCK=0;EASY_CHRONO_HIGHRES_CLOCK=0;EASY_OPTION_START_LISTEN_ON_STARTUP=0;EASY_OPTION_MEASURE_STORAGE_EXPAND=0;EASY_OPTION_STORAGE_EXPAND_BLOCKS_ON=0;EASY_OPTION_TRUNCATE_LONG_RUNTIME_NAMES=0;EASY_OPTION_CHECK_MAX_VALUE_DATA_SIZE=0;EASY_OPTION_IMPLICIT_THREAD_REGISTRATION=1;EASY_OPTION_EVENT_TRACING_ENABLED=1;EASY_OPTION_LOW_PRIORITY_EVENT_TRACING=1;EASY_OPTION_LOG_ENABLED=0;EASY_OPTION_PRETTY_PRINT_FUNCTIONS=0;EASY_OPTION_BUILTIN_COLORS=1;EASY_PROFILER_STATIC=1;EASY_PROFILER_VERSION_MAJOR=2;EASY_PROFILER_VERSION_MINOR=1;EASY_PROFILER_VERSION_PATCH=0;EASY_DEFAULT_PORT=28077;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;EASY_CHRONO_STEADY_CLOCK=0;EASY_CHRONO_HIGHRES_CLOCK=0;EASY_OPTION_START_LISTEN_ON_STARTUP=0;EASY_OPTION_MEASURE_STORAGE_EXPAND=0;EASY_OPTION_STORAGE_EXPAND_BLOCKS_ON=0;EASY_OPTION_TRUNCATE_LONG_RUNTIME_NAMES=0;EASY_OPTION_CHECK_MAX_VALUE_DATA_SIZE=0;EASY_OPTION_IMPLICIT_THREAD_REGISTRATION=1;EASY_OPTION_EVENT_TRACING_ENABLED=1;EASY_OPTION_LOW_PRIORITY_EVENT_TRACING=1;EASY_OPTION_LOG_ENABLED=0;EASY_OPTION_PRETTY_PRINT_FUNCTIONS=0;EASY_OPTION_BUILTIN_COLORS=1;_BUILD_PROFILER=1;EASY_PROFILER_STATIC=1;EASY_PROFILER_VERSION_MAJOR=2;EASY_PROFILER_VERSION_MINOR=1;EASY_PROFILER_VERSION_PATCH=0;EASY_DEFAULT_PORT=28077;BUILD_WITH_EASY_PROFILER=1;_WIN32_WINNT=0x0600;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>EASY_OPTION_MEASURE_STORAGE_EXPAND=0;EASY_OPTION_STORAGE_EXPAND_BLOCKS_ON=0;EASY_OPTION_TRUNCATE_LONG_RUNTIME_NAMES=0;EASY_OPTION_CHECK_MAX_VALUE_DATA_SIZE=0;EASY_OPTION_IMPLICIT_THREAD_REGISTRATION=1;EASY_OPTION_EVENT_TRACING_ENABLED=1;EASY_OPTION_LOW_PRIORITY_EVENT_TRACING=1;EASY_OPTION_LOG_ENABLED=0;EASY_OPTION_PRETTY_PRINT_FUNCTIONS=0;EASY_OPTION_BUILTIN_COLORS=1;EASY_PROFILER_STATIC=1;EASY_PROFILER_VERSION_MAJOR=2;EASY_PROFILER_VERSION_MINOR=1;EASY_PROFILER_VERSION_PATCH=0;EASY_DEFAULT_PORT=28077;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\easy">
+      <UniqueIdentifier>{93b9b9fc-8780-41b2-817f-7a2e80ab4fd6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="block_descriptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chunk_allocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="current_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="current_time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="event_trace_status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nonscoped_block.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="profile_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spin_lock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stack_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_storage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\arbitrary_value.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\easy_net.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\easy_protocol.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\easy_socket.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\profiler.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\reader.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\serialized_block.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\utility.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\writer.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\details\arbitrary_value_aux.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\details\arbitrary_value_public_types.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\details\easy_compiler_support.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\details\profiler_aux.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\details\profiler_colors.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\details\profiler_in_use.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easy\details\profiler_public_types.h">
+      <Filter>Header Files\easy</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base_block_descriptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="block.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="block_descriptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="easy_socket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="event_trace_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nonscoped_block.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="profile_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="profiler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="reader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="serialized_block.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_storage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="writer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
